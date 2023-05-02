@@ -1,8 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Shapes = require('./lib/shapes.js');
-//Shape, Circle, Triangle, Square
-//shapeColor, text, textolor
 
 inquirer
     .prompt([
@@ -49,9 +47,3 @@ inquirer
             );
         }
     });
-
-    /*
-    TODO:
-    add a method to limit text to 3 characters
-    write tests for each class.
-    */
