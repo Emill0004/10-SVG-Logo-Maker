@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const Shapes = require('./lib/shapes.js');
 
+// Inquirer code to promt the user for values.
 inquirer
     .prompt([
         {
@@ -26,6 +27,7 @@ inquirer
             name: 'shapeColor',
         },
     ])
+    //this .then function uses an if statement to generate one of the three shapes based on user input and then makes logo.svg with the render() method.
     .then((data) => {
         if (data.shape === "Circle") {
             const newLogo = new Shapes[1](data.shapeColor, data.text, data.textColor);
